@@ -1,0 +1,354 @@
+
+.btn-contact {
+    background-color: #e3342f; /* Color de fondo */
+    color: #ffffff; /* Color de texto */
+    padding: 0.375rem 1.5rem; /* Aumenta el padding horizontal para hacer el botón más ancho */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    display: inline-block; /* Cambio para asegurar el centrado del texto */
+    user-select: none; /* El texto no será seleccionable */
+    border: 1px solid transparent; /* Borde transparente */
+    font-size: 1rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; /* Transición suave para hover y focus */
+    width: 100%; /* Hace que el botón se expanda al ancho total de su contenedor padre */
+    max-width: 200px; /* Establece un ancho máximo para el botón */
+    margin: 0 auto; /* Centra el botón horizontalmente en su contenedor */
+    font-family: 'Merriweather', serif; /* Añade Merriweather como la fuente del botón */
+  
+  }
+  .btn-contact:hover {
+    background-color: #cc1f1a; /* Color de fondo más oscuro al pasar el mouse */
+    color: #ffffff; /* Color de texto */
+  }
+
+
+.contenedor-contacto {
+    background: url('imagenes/about-img-copy-p-500.webp') no-repeat center center;
+    position: relative;
+    display: flex;
+    align-items: center; /* Esto mantendrá el contenido centrado verticalmente */
+    justify-content: center; /* Esto mantendrá el contenido centrado horizontalmente */
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    min-height: 100vh; /* Esto asegura que el contenedor tenga al menos la altura de la pantalla */
+    flex-direction: column;
+}
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Usamos un gradiente lineal que va de arriba (top) a abajo (bottom) */
+    background: linear-gradient(rgba(69, 67, 67, 0.5), #221f1f);
+
+}
+
+.izquierda-column .lead {
+    font-size: 18px; /* Ajusta este valor al tamaño de fuente deseado */
+    color: #fff9f9; /* Cambia el color del texto según necesites */
+    line-height: 1.6; /* Ajusta la altura de línea para mejorar la legibilidad */
+    text-align: justify; /* Justifica el texto si es necesario */
+    margin-bottom: 20px; /* Añade un margen inferior si necesitas espacio antes de los íconos sociales */
+}
+
+.izquierda-column {
+    font-family: 'Oswald', sans-serif;
+    color: #fff; /* Cambia el color del texto a blanco */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 30px;
+    padding-right: 15px;
+    border-bottom: 10px;
+}
+
+.izquierda-column h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700; /* Bold */
+    color: white; /* Asumiendo que el título debe ser blanco */
+    text-transform: uppercase; /* Si el título debe estar en mayúsculas */
+    margin-bottom: 0.5rem; /* Espacio debajo del título, ajusta al gusto */
+    font-size: 3.5rem; /* Ajusta esta propiedad según la apariencia deseada */
+    /* Añade más estilos según sea necesario */
+}
+.izquierda-column .lead {
+    margin-bottom: 0px; /* Reduce el espacio debajo del párrafo. Ajusta según necesidad */
+}
+
+/* Para tabletas */
+@media (max-width: 768px) {
+    .izquierda-column h1 {
+        font-size: 2rem; /* Tamaño más pequeño para tabletas */
+    }
+     .form-group.text-right {
+        text-align: center !important; /* Alinea el texto al centro en dispositivos móviles */
+    }
+    .form-group.text-right button {
+        display: inline-block; /* Asegura que el botón se muestre como bloque en dispositivos móviles */
+        margin: 0 auto; /* Centra el botón horizontalmente */
+    }
+}
+
+/* Para móviles */
+@media (max-width: 576px) {
+    .izquierda-column h1 {
+        font-size: 2rem; /* Tamaño más pequeño para móviles */
+    }
+    .izquierda-column {
+        padding-left: 15px;
+        
+    }
+    .form-group.text-right {
+        text-align: center !important; /* Alinea el texto al centro en dispositivos móviles */
+    }
+    .form-group.text-right button {
+        display: inline-block; /* Asegura que el botón se muestre como bloque en dispositivos móviles */
+        margin: 0 auto; /* Centra el botón horizontalmente */
+    } 
+}
+
+.follow-us {
+    margin-top: 12px;
+    margin-right: 0px; /* Esto añade margen a la derecha del texto */
+}
+
+
+.social-icons-label {
+    margin-right: 10px; /* Ajusta el margen según necesites */
+}
+
+
+/* Ajustar el margen superior del bloque "Síguenos en" */
+.izquierda-column .social-icons {
+    margin-top: 0px; /* Reduce el espacio encima de los íconos sociales. Ajusta según necesidad */
+}
+.social-icons {
+    display: flex;
+    justify-content: start; /* Esto alinea los ítems al inicio del contenedor */
+    align-items: center; /* Esto alinea los ítems verticalmente en el centro */
+    gap: 5px; /* Esto añade un espacio entre los ítems */
+    display: flex;
+    align-items: center; /* Esto centra verticalmente los hijos en el contenedor */
+    height: 100px; /* Ajusta según necesites */
+
+}
+
+
+
+/* Para las imágenes de los íconos */
+.social-icons img {
+    background-color: #ccc;
+    display: block; /* Esto remueve cualquier espacio extra alrededor de las imágenes que podría afectar la alineación */
+    width: 24px; /* Esto establece un ancho fijo para los íconos */
+    height: auto; /* Esto mantiene la proporción de los íconos al ajustar su altura automáticamente */
+}
+/* Asegúrate de que los íconos tengan el tamaño adecuado */
+.social-icons a img {
+    width: 30px; /* Ajusta según necesites */
+    height: 30px; /* Ajusta según necesites */
+}
+/* Para los enlaces que contienen las imágenes de los íconos */
+.social-icons a {
+    display: block; /* Esto asegura que el enlace (a) se comporte como un bloque, lo que permite aplicar márgenes y padding */
+    margin: 0 5px; /* Esto añade margen a los lados de los íconos para separarlos un poco */
+}
+.social-icons a:hover {
+    color: #333; /* Color del ícono al pasar el cursor */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*contenedor derecha*/
+.input-dark {
+    background-color: #f5f5f5; /* Fondo ligeramente oscuro para los campos */
+    border: 1px solid #ccc; /* Borde gris */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interior ligera */
+}
+
+ 
+  .contact-form-container {
+    padding: 1rem; /* Ajusta el padding a tu preferencia */
+    margin: auto; /* Para centrar el contenedor si tiene un ancho máximo */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Sombra suave */
+    background-color: #ffffff; /* Fondo blanco */
+    padding-top: 0.5rem; /* Reduce el relleno superior */
+    padding-bottom: 4rem;
+}
+
+  
+  .form-control {
+    border: none; /* Elimina el borde */
+    border-bottom: 1px solid #000; /* Línea inferior negra */
+    border-radius: 0; /* Sin bordes redondeados */
+    margin-top: .5rem; /* Espacio superior */
+  }
+  
+  label {
+    font-weight: normal; /* Hace la fuente de la etiqueta negrita */
+   
+  }
+  
+  .btn-primary {
+    background-color: #d9534f; /* Color rojo personalizado */
+    border: none; /* Sin bordes */
+  }
+ 
+  .derecha-column{
+    font-family: 'Oswald', sans-serif;
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    border-bottom: 10px;
+  }
+
+  .form-group.text-right {
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #221f1f;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-logo{
+    max-width: 60%;
+    margin-bottom: 40px;
+  }
+  
+  .p-custom {
+    width: 50%;
+    color: #ffffff; /* Cambia el color del texto */
+    font-size: 1rem; /* Establece el tamaño del texto */
+    /* Añade cualquier otro estilo que necesites */
+  }
+  .btn-custom {
+    color: #ff0404; /* Color del texto del botón */
+    border: 1px solid #f0f0f0; /* Estilo y color del borde */
+    padding: 0.5rem 1rem; /* Relleno del botón */
+    font-size: 1rem; /* Tamaño del texto */
+    text-transform: uppercase; /* Transformación del texto */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el fondo */
+  
+  }
+  
+  .btn-custom:hover {
+    color: #000; /* Color del texto al pasar el ratón por encima */
+    background-color: #fff; /* Color de fondo al pasar el ratón por encima */
+  }
+  /* Establece la fila para usar flex y tener una altura completa */
+  .custom-row {
+    display: flex;
+    align-items: center; /* Esto centrará los ítems verticalmente */
+    height: 100%; /* O define una altura específica */
+  }
+  
+  /* Asegúrate de que cada columna flexione sus ítems internos también */
+  .custom-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Esto centrará el contenido verticalmente dentro de la columna */
+    padding-top: 20px; /* Ajusta este valor según sea necesario */
+  
+  } 
+  .list-unstyled {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .btn-danger-2 {
+    background-color: rgb(227, 10, 10);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .text-and-image {
+    display: flex;
+    align-items:end;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  
+  .membership-logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .social-icons{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .social-icons a {
+    margin-left: 10px;
+  }
+  
+  
+  /* Estilos para móviles (generalmente dispositivos con anchos menores de 768px) */
+  @media (max-width: 767px) {
+    .footer-logo {
+        max-width: 100%; /* Hace que el logo tome el ancho completo en dispositivos móviles */
+        margin-bottom: 20px; /* Reduce el margen inferior para ahorrar espacio */
+    }
+    .p-custom {
+        width: 100%; /* Hace que el párrafo tome el ancho completo */
+    }
+    .custom-row {
+        flex-direction: column; /* Apila los elementos verticalmente en dispositivos móviles */
+    }
+    .custom-col, .text-and-image, .social-icons {
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        text-align: center; /* Alinea el texto al centro */
+        padding-top: 0; /* Elimina el padding superior adicional si se añadió antes */
+    }
+    
+    .membership-logo {
+        margin: 0 auto; /* Centra el logo de membresía */
+        display: block; /* Asegura que el logo se muestre como bloque */
+    }
+    .btn-custom, .btn-danger-2 {
+        display: block; /* Cambia a display: block para asegurar que ocupen toda la línea */
+        width: fit-content; /* Ajusta el ancho al contenido, pero centrándolos con margin: auto */
+        margin: 0 auto 20px; /* Centra los botones automáticamente */
+        padding: 0.5rem 1rem;
+      }
+      .text-and-image {
+        flex-direction: column;
+      }
+}
+  /* Estilos para tabletas (generalmente dispositivos con anchos entre 768px y 991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Ajusta los estilos según tus necesidades para tabletas aquí */
+  }

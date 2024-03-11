@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+    
+    <style>
+body{
+background-color: #151617;
+}
+     
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #2c2929;
+    width: 100%; /* Ajusta el ancho para cubrir toda la pantalla */
+    z-index: 20; /* Asegura que la barra de navegación esté por encima de otros elementos */
+    position: relative;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* Asegúrate de que los enlaces sean claros */
+  }
+  
+  .btn-contact {
+    background-color: #e3342f; /* Color de fondo */
+    color: #ffffff; /* Color de texto */
+    padding: 0.375rem 1.5rem; /* Aumenta el padding horizontal para hacer el botón más ancho */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    display: inline-block; /* Cambio para asegurar el centrado del texto */
+    user-select: none; /* El texto no será seleccionable */
+    border: 1px solid transparent; /* Borde transparente */
+    font-size: 1rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; /* Transición suave para hover y focus */
+    width: 100%; /* Hace que el botón se expanda al ancho total de su contenedor padre */
+    max-width: 200px; /* Establece un ancho máximo para el botón */
+    margin: 0 auto; /* Centra el botón horizontalmente en su contenedor */
+    font-family: 'Merriweather', serif; /* Añade Merriweather como la fuente del botón */
+  }
+  .btn-contact:hover {
+    background-color: #cc1f1a; /* Color de fondo más oscuro al pasar el mouse */
+    color: #ffffff; /* Color de texto */
+  }
+  
+  /* Asegúrate de que tu botón esté alineado con los otros elementos del nav si es necesario */
+  .nav-item {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el botón en el nav item */
+  }
+  
+
+  /* empieza la seccion de contendores de vehiculos */
+  .titulo-vehiculos{
+    padding-top: 10px;
+    font-family: 'Oswald', sans-serif;  
+    font-size: 3rem; /* Tamaño más pequeño para móviles */
+    color: white; /* Color de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejorar la legibilidad */
+    margin-bottom: 0rem; /* Margen en la parte inferior para dar espacio */
+    text-align: center; /* Alineación de texto centrada */
+  }
+  .custom-card {
+    transition: all 0.3s ease; /* Esto hace que los cambios sean graduales */
+    /* Usamos un gradiente lineal para el fondo */
+    background: linear-gradient(rgb(31, 30, 30), rgb(165, 163, 163));
+    display: flex;
+    align-items: center; /* Esto ya debería centrar verticalmente los elementos hijos */
+    justify-content: space-between; /* Separa horizontalmente los elementos hijos */
+    padding: 1rem;
+    color: white;
+}
+
+  
+   
+  .container-fluid-vehiculos{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .card-title h5 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem; /* Tamaño de fuente del título */
+    margin: 0; /* Elimina el margen por defecto de h5 */
+    white-space: nowrap; /* Asegura que el texto no se pase a una nueva línea */
+    overflow: hidden; /* Oculta cualquier texto que se desborde del ancho definido */
+    text-overflow: ellipsis; /* Añade '...' si el texto se desborda */
+    z-index: 2;
+  }
+  
+  .card-title span {
+    font-size: 0.5em; /* Ajusta esto para cambiar el tamaño relativo de '24' en comparación con 'PICKUP' */
+    color: #483b3b; /* Esto es para el color rojo, pero ajústalo según necesites */
+    margin-left: 0.25em; /* Esto agrega un pequeño espacio entre 'PICKUP' y '24' */
+    position: relative; /* Esto permite posicionar el span relativo a su posición normal */
+    top: -1em; /* Ajusta esto para mover '24' arriba o abajo relativo a 'PICKUP' */
+    font-weight: bold;
+  }
+  .card-img {
+    width: auto; /* Esto permitirá que la imagen se estire más si hay espacio disponible */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: contain; /* Esto asegura que toda la imagen se muestre */
+    max-width: 50%;
+    max-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .custom-card:hover .card-img {
+    transform: scale(1.4); /* Aumenta ligeramente el tamaño de la imagen */
+  }
+  
+  
+  
+  
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px; /* Ajusta el espaciado entre elementos */
+  }
+  
+  .sidebar-menu a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: white; /* Ajusta el color del texto */
+    font-size: 1.3em; /* Ajusta el tamaño del texto */
+    /* Otros estilos para tu enlace */
+  }
+  
+  .sidebar-menu i {
+    color: #007bff;
+    margin-left: 9px; /* Espacio entre el ícono y el texto */
+    transform: rotate(45deg); /* Rota el ícono hacia la esquina superior derecha */
+    /* Otros estilos para tu ícono */
+  }
+  
+
+
+
+
+
+
+  /* Estilos para móviles */
+@media only screen and (max-width: 767px) {
+    .container-fluid-vehiculos{
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    .titulo-vehiculos {
+      font-size: 2rem; /* Tamaño más pequeño para móviles */
+    }
+  
+    .card-title h5 {
+      font-size: 1.7rem; /* Tamaño de fuente más pequeño para los títulos de las tarjetas en móviles */
+    }
+    .sidebar-menu a {
+        font-size: 1em; /* Tamaño de fuente más pequeño para móviles */
+      }
+
+  }
+  
+  /* Estilos para tabletas */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .titulo-vehiculos {
+      font-size: 2.5rem; /* Tamaño intermedio para tabletas */
+    }
+  
+    .card-title h5 {
+      font-size: 1.9rem; /* Tamaño de fuente intermedio para los títulos de las tarjetas en tabletas */
+    }
+    .sidebar-menu a {
+        font-size: 1.1em; /* Tamaño de fuente intermedio para tabletas */
+      }
+  }
+  
+  /* Estilos para dispositivos más grandes (laptops/desktops) */
+  @media only screen and (min-width: 992px) {
+    .titulo-vehiculos {
+      font-size: 3rem; /* Tamaño más grande para dispositivos más grandes */
+    }
+  
+    .card-title h5 {
+      font-size: 2.3rem; /* Tamaño de fuente más grande para los títulos de las tarjetas en dispositivos más grandes */
+    }
+    .sidebar-menu a {
+        font-size: 1.3em; /* Tamaño de fuente más grande para dispositivos más grandes */
+      }
+  }
+  
+  
+   
+    </style>
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="imagenes/logooriginal.png" alt="Logo" style="height: 40px;"> <!-- Ajusta el path a tu logo -->
+
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active mr-3">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-home"></i><span class="sr-only">(current)</span> <!-- Asegúrate de incluir FontAwesome para los íconos -->
+                </a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="vehiculos.html">Vehicles +</a>
+          </li>
+          
+            <li class="nav-item mr-3">
+                <a class="nav-link" href="feature.html">Features</a>
+            </li>
+            <li class="nav-item mr-3">
+                <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <!-- Aplicación de la nueva clase al botón de Contact Us -->
+            <li class="nav-item active mr-3">
+                <a class="nav-link btn-contact" href="contacto.html">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- 
+<div>
+    <h2 class="mt-2 text-center titulo-vehiculos">VEHÍCULOS</h2>
+</div>
+-->
+
+<div class="container-fluid mt-5">
+    <div class="vehicles-section">
+        <div class="container-fluid-vehiculos">
+            <div class="row mt-3">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="custom-card d-flex">
+                      <!-- Contenedor del título -->
+                      <div class="card-title">
+                        <h5>PICKUP<span>24</span></h5>
+                      </div>
+                      <!-- Imagen -->
+                      <img src="imagenes/fattruck-army3-real-copy-p-500.webp" class="card-img" alt="Vehículo de emergencia con diseño rojo, amarillo y azul.">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="custom-card d-flex">
+                      <!-- Contenedor del título -->
+                      <div class="card-title">
+                        <h5>PICKUP<span>24</span></h5>
+                      </div>
+                      <!-- Imagen -->
+                      <img src="imagenes/fattruck-army3-real-copy-p-500.webp" class="card-img" alt="Vehículo de emergencia con diseño rojo, amarillo y azul.">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="custom-card d-flex">
+                      <!-- Contenedor del título -->
+                      <div class="card-title">
+                        <h5>PICKUP<span>24</span></h5>
+                      </div>
+                      <!-- Imagen -->
+                      <img src="imagenes/fattruck-army3-real-copy-p-500.webp" class="card-img" alt="Vehículo de emergencia con diseño rojo, amarillo y azul.">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="custom-card d-flex">
+                      <!-- Contenedor del título -->
+                      <div class="card-title">
+                        <h5>PICKUP<span>24</span></h5>
+                      </div>
+                      <!-- Imagen -->
+                      <img src="imagenes/fattruck-army3-real-copy-p-500.webp" class="card-img" alt="Vehículo de emergencia con diseño rojo, amarillo y azul.">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="custom-card d-flex">
+                      <!-- Contenedor del título -->
+                      <div class="card-title">
+                        <h5>PICKUP<span>24</span></h5>
+                      </div>
+                      <!-- Imagen -->
+                      <img src="imagenes/fattruck-army3-real-copy-p-500.webp" class="card-img" alt="Vehículo de emergencia con diseño rojo, amarillo y azul.">
+                    </div>
+                  </div>
+            
+                  <!--Agrega mas imagenes aqui -->
+
+
+                <!-- seccion de navs -->
+                <div class="sidebar-menu col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <ul>
+                        <li><a href="#haulers">HAULERS & AMPHIBIOUS TRAILER<i class="fas fa-arrow-up"></i></a></li>
+                        <li><a href="#accessories">ACCESSORIES<i class="fas fa-arrow-up"></i></a></li>
+                        <li><a href="#features">FEATURES & BENEFITS<i class="fas fa-arrow-up"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
